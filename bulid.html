@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+    <title>Perfume Paradise</title>
+    
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #1f2833
+            
+        }
+        header {
+            background-color: #0b0c10;
+            padding: 10px 0;
+            top: 0;
+            z-index: 999;
+        }
+        
+       .done {
+   
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #010d1abb;
+    color: #c5c6c7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.done:hover {
+    background-color: #2989f7;
+}
+        .kutc {
+            position: absolute;
+            right: 0%;
+            width: 15%;
+        }
+
+        .logo{ position: absolute;
+               left: 0%;
+               width: 15%;
+        }
+
+        h3{ color: #c5c6c7;}
+        
+        h2{font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #53afa7;}
+
+        h1{font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #53afa7;}
+
+        .font{font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #137c9c}
+
+        hr{margin-left: 20px;
+           margin-right: 20px;
+           border: 2px solid #7197c0;
+           border-radius: 20px;
+        }
+
+        nav {
+            background-color: #213244;
+            color: #c5c6c7;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #f5faff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #6081a7;
+        }
+       
+        .main-content {
+            text-align: center;
+            padding: 20px;
+        }
+        
+
+       
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #1f2833;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #3e52686b;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #53afa7;
+}
+h4{
+    
+    color: #c5c6c7;
+}
+
+.options {
+    margin-bottom: 20px;
+}
+
+.option {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+select,
+input[type="range"],
+input[type="number"],
+textarea {
+    width: 99%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #010d1abb;
+    color: rgb(95, 37, 37);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2989f7;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #c5c6c7;
+}
+
+    </style>
+</head>
+
+    <header>
+        <a href="prefums.html"><img class="logo" src="LOGO4.jpg" alt="no internet"></a>
+        
+        <a  href="https://www.khawarizmi.edu.jo/"><img class="kutc" src="kutc logo.png" alt="no internet" width="200px"></a>
+       
+        
+    
+        
+        <p align=center><marquee behavior="slide" direction=up width="270"><h1 class="font"><i>Your choice</i></h1></marquee>
+            
+    </header>
+    <nav>
+        <a href="prefums.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about us.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="why us.html">Why us?</a>
+        <a href="about perfumes.html">About perfumes</a>
+        <a href="terms & conditions.html">Terms & Conditions</a>
+        
+       
+        
+        
+    </nav>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Perfume Creator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Make it with love</h1>
+        <div class="options">
+            <div class="option">
+                <label for="scent"><h4>Choose a Scent:</h4></label>
+                <select id="scent">
+                    <option value="floral">Floral</option>
+                    <option value="citrus">Citrus</option>
+                    <option value="woody">Woody</option>
+                    <option value="spicy">Spicy</option>
+                    <option value="aquatic">Aquatic</option>
+                </select>
+            </div>
+            <div class="option">
+                <label for="strength"><h4>Choose Strength:</h4></label>
+                <input type="range" id="strength" min="1" max="10" value="5">
+                <span id="strengthValue">5</span>
+            </div>
+            <div class="option">
+                <label for="size"><h4>Choose Size (ml):</h4></label>
+                <input type="number" id="size" min="10" max="100" step="10" value="50">
+            </div>
+            <div class="option">
+                <label for="additionalNotes"><h4>Additional Notes:</h4></label>
+                <textarea id="additionalNotes" placeholder="Enter additional notes..."></textarea>
+            </div>
+            <button onclick="calculate()"><h3>Create Perfume</h3></button>
+        </div>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculate() {
+            var scent = document.getElementById('scent').value;
+            var strength = parseInt(document.getElementById('strength').value);
+            var size = parseInt(document.getElementById('size').value);
+            var additionalNotes = document.getElementById('additionalNotes').value;
+
+            var price = size * (strength / 10) * 5;
+
+            var result = "Your custom perfume with " + strength + "% strength of " + scent + " scent, in " + size + "ml";
+            if (additionalNotes.trim() !== "") {
+                result += ", with additional notes: " + additionalNotes;
+            }
+            result += ", will cost $" + price.toFixed(2);
+
+            document.getElementById('result').innerText = result;
+        }
+
+        document.getElementById('strength').addEventListener('input', function() {
+            document.getElementById('strengthValue').innerText = this.value;
+        });
+    </script>
+</body>
+<center>
+<a href="order page2.html"><button1 class="done" role="button">Done</button></a>
+    <br><br><br>
+</center>
+</html>
